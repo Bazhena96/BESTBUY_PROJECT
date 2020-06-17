@@ -9,7 +9,7 @@ Open and Load
     # ${prefs}  Create Dictionary  download.prompt_for_download=${FALSE}  plugins.always_open_pdf_externally=${TRUE}  plugins.plugins_disabled=${disabled}
     # Call Method  ${chrome_options}  add_experimental_option  prefs  ${prefs}
     Open Browser  https://www.bestbuy.com  chrome  executable_path=/usr/local/Caskroom/chromedriver/83.0.4103.39/chromedriver   
-    Set Browser Implicit Wait  19
+    Set Browser Implicit Wait  20
 Choose The Language
     [Documentation]  Language: english
     Wait Until Page Contains Element  css=.is-active
