@@ -11,7 +11,7 @@ User Choose The Language Settings
     Choose The Language
     Close Browser
     
- Test Checkout Flow
+Test Checkout Flow
     @{COUNTRYES} =  Create List  us  ca  mx
     :FOR  ${COUNTRY}  IN  @{COUNTRYES}
     \     Choose The Country  ${COUNTRY}
