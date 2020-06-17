@@ -10,6 +10,7 @@ User Choose The Language Settings
     Open and Load
     Choose The Language
     Close Browser
+    
  Test Checkout Flow
     @{COUNTRYES} =  Create List  us  ca  mx
     :FOR  ${COUNTRY}  IN  @{COUNTRYES}
