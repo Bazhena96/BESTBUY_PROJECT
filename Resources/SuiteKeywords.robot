@@ -5,8 +5,11 @@ Resource  BaseKeywords.robot
 ***Keywords***
 Choose The Country
     [Arguments]  ${COUNTRY}
+    
+    &{COUNTRY_BUTTONS}  Create Dictionary  ca=css=.content > div:nth-child(1) > div:nth-child(4) > a:nth-child(1) > img:nth-child(1)  us=css=.content > div:nth-child(1) > div:nth-child(4) > a:nth-child(2) > img:nth-child(1)  mx=css=.content > div:nth-child(1) > div:nth-child(4) > a:nth-child(3) > img:nth-child(1)
+
     Open and Load
-    Click Element  ${COUNTRY}
+    Click Element  ${COUNTRY_BUTTONS}[${COUNTRY}]
 Verify That Search Completed
     Wait Until Page Contains  Results for
 User Sort All Results
