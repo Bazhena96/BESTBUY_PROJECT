@@ -1,6 +1,6 @@
 ***Settings***
 Library  SeleniumLibrary
-Resource  Variables.robot
+Resource  GlobalVariables.robot
 Resource  BaseKeywords.robot
 ***Keywords***
 Choose The Country

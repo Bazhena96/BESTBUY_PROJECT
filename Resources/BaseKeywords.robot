@@ -1,6 +1,6 @@
 ***Settings***
 Library  SeleniumLibrary
-Resource  Variables.robot
+Resource  GlobalVariables.robot
 Resource  SuiteKeywords.robot
 ***Keywords***
 Open and Load
