@@ -25,7 +25,7 @@ Select Item
     [Arguments]    ${product link}
     Click Element  ${product link}
 User Input Email To Sign In
-    [Arguments]  ${user email fild}
+    [Arguments]  ${user email field}
     Wait Until page Contains Element  ${user email field}
     Input Text  ${user email field}  ${user email}
 User Input Password
