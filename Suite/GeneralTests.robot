@@ -16,7 +16,7 @@ Test checkout flow
     FOR  ${country}  IN  @{countryes}
          Choose The Country  ${country}
          Run Keyword IF  '${country}' == 'us'  Dismiss Alert
-         Run Keyword IF  '${country}' == 'us'  User Sign Into Account  ${country}  ELSE  Run Keyword and Ignore Error  User Sign Into Account  ${COUNTRY}
+         Run Keyword IF  '${country}' == 'us'  User Sign Into Account  ${country}  ELSE  Run Keyword and Ignore Error  User Sign Into Account  ${country}
          User Search The Product  ${country}
          Verify That Search Completed
          User Sort All Results   ${country}
