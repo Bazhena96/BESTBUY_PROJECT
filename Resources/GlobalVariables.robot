@@ -1,5 +1,5 @@
-***Variables***
-${USER_EMAIL}  bazhenkak@gmail.com
-${USER_PASSWORD}  123456789Dd@
-${SEARCH_QUERY}  adapter
+*** Variables ***
+${user email}  bazhenkak@gmail.com
+${user password}  123456789Dd@
+${search query}  adapter
 
