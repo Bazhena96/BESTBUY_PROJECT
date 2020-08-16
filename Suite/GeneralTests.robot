@@ -22,5 +22,5 @@ Test checkout flow
          User Sort All Results   ${country}
          User Select One Of The Results  ${country}
          User Add Product To Cart  ${country}
-         Verify That Product At The Cart
+         Verify That Product At The Cart  ${country}
      END
