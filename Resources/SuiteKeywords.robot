@@ -18,13 +18,13 @@ User Sort All Results
     Sort Product  ${sort product}[${country}]
 User Select One Of The Results
     [Arguments]  ${country}
-    &{product link}  Create Dictionary     ca=css=div.col-xs-12_1GBy8:nth-child(1) > div:nth-child(1) > a:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1)  us=css=li.col-xs-4:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > h3:nth-child(1) > a:nth-child(1)      mx=css=#product-line-item-1000204433 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > a:nth-child(1) > h4:nth-child(1)
+    &{product link}  Create Dictionary     ca=css=div.col-xs-12_1GBy8:nth-child(1) > div:nth-child(1) > a:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1)  us=css=button.btn-primary:nth-child(1)      mx=css=#product-line-item-1000204433 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > a:nth-child(1) > h4:nth-child(1)
     Maximize Browser Window
     Wait Until Page Contains Element  ${product link}[${country}]
     Select Item  ${product link}[${country}]
 User Search The Product  
     [Arguments]  ${country}
-    &{search field}  Create Dictionary  ca=css=textField_e79SD   us=gh-search-input  mx=gh-search-input
+    &{search field}  Create Dictionary  ca=css=.textField_e79SD   us=gh-search-input  mx=#gh-search-input
     &{search icon}  Create Dictionary  ca=css=.searchButton_T4-BG  us=css=.header-search-button  mx=css=.header-search-button
     Wait Until Page Contains Element  ${search field}[${country}]
     Input Text   ${search field}[${country}]  ${search query}
@@ -44,10 +44,13 @@ User Sign Into Account
     User Click Submit  ${submit to sign in}[${country}]
 User Add Product To Cart
     [Arguments]  ${country}
-    &{add to cart button}  Create Dictionary   ca=css=.button_1XJDJ  us=css=#fulfillment-add-to-cart-button-ae06fe1c-7f9a-4336-be08-258612411dec > div > div > button  mx=css=.btn-lg
+    &{add to cart button}  Create Dictionary   ca=.primary_oeAKs  us=css=#fulfillment-add-to-cart-button-9f846657-c048-4950-ac4b-245c234e72e3 > div > div > button  mx=css=.btn-lg
     Wait And Click  ${add to cart button}[${country}]
 Verify That Product At The Cart
-    Wait Until PAge Contains  added to cart
+        [Arguments]  ${country}
+        &{added to cart}  Create Dictionary  ca=This item has been added to your cart.  us=Added to cart  mx=Tù Producto Se Agregó Al Carrito.
+    Wait Until Page Contains  ${added to cart}[${country}]
+
 
     
     
