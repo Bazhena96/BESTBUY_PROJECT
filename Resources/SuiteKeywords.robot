@@ -9,7 +9,7 @@ Choose The Country
     &{country button}  Create Dictionary  ca=css=.content > div:nth-child(1) > div:nth-child(4) > a:nth-child(1) > img:nth-child(1)  us=css=.content > div:nth-child(1) > div:nth-child(4) > a:nth-child(2) > img:nth-child(1)  mx=css=.content > div:nth-child(1) > div:nth-child(4) > a:nth-child(3) > img:nth-child(1)
 
     Open and Load
-    Click Element  ${country buttons}[${country}]
+    Click Element  ${country button}[${country}]
 Verify That Search Completed
     Wait Until Page Contains  Results for
 User Sort All Results
@@ -24,10 +24,10 @@ User Select One Of The Results
     Select Item  ${product link}[${country}]
 User Search The Product  
     [Arguments]  ${country}
-    &{search fields}  Create Dictionary  ca=css=textField_e79SD   us=gh-search-input  mx=gh-search-input
+    &{search field}  Create Dictionary  ca=css=textField_e79SD   us=gh-search-input  mx=gh-search-input
     &{search icon}  Create Dictionary  ca=css=.searchButton_T4-BG  us=css=.header-search-button  mx=css=.header-search-button
-    Wait Until Page Contains Element  ${search fields}[${country}]
-    Input Text   ${search fields}[${country}]  ${search query}
+    Wait Until Page Contains Element  ${search field}[${country}]
+    Input Text   ${search field}[${country}]  ${search query}
     Sleep  5
     Wait Until Page Contains Element  ${search icon}[${country}]
     Click Element   ${search icon}[${country}]
