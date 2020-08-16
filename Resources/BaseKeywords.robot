@@ -1,8 +1,8 @@
-***Settings***
+*** Settings ***
 Library  SeleniumLibrary
 Resource  GlobalVariables.robot
 Resource  SuiteKeywords.robot
-***Keywords***
+*** Keywords ***
 Open and Load
     # ${chrome_options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
     # ${disabled}  Create List  Chrome PDF Viewer  PrintFileServer
@@ -15,29 +15,29 @@ Choose The Language
     Wait Until Page Contains Element  css=.is-active
     Click Element  css=.is-active
 Sort Product
-    [Arguments]  ${SORT_PRODUCT}
-    Wait Until Page Contains Element  ${SORT_PRODUCT}
-    Click Element  ${SORT_PRODUCT}
+    [Arguments]  ${sort product}
+    Wait Until Page Contains Element  ${sort product}
+    Click Element  ${sort product}
 Select Item
-    [Arguments]    ${PRODUCT_LINK}
-    Click Element  ${PRODUCT_LINK}
+    [Arguments]    ${product link}
+    Click Element  ${product link}
 User Input Email To Sign In
-    [Arguments]  ${USER_EMAIL_FIELD}
-    Wait Until page Contains Element  ${USER_EMAIL_FIELD}
-    Input Text  ${USER_EMAIL_FIELD}  ${USER_EMAIL}
+    [Arguments]  ${user email fild}
+    Wait Until page Contains Element  ${user email field}
+    Input Text  ${user email field}  ${user email}
 User Input Password
-    [Arguments]  ${PASSWORD_FIELD}
-    Wait Until Page Contains Element  ${PASSWORD_FIELD}
-    Input Password  ${PASSWORD_FIELD}  ${USER_PASSWORD}
+    [Arguments]  ${password field}
+    Wait Until Page Contains Element  ${password field}
+    Input Password  ${password field}  ${user password}
 User Click The Button To Account
-    [Arguments]  ${CLICK_BUTTON_TO_SIGN_IN}  ${ACCOUNT_BUTTON}
-    Wait Until page Contains Element  ${ACCOUNT_BUTTON}
-    Click Element  ${ACCOUNT_BUTTON}
-    Wait Until Page Contains Element  ${CLICK_BUTTON_TO_SIGN_IN}
-    Click Element  ${CLICK_BUTTON_TO_SIGN_IN}
+    [Arguments]  ${click button to sign in}  ${account button}
+    Wait Until page Contains Element  ${account button}
+    Click Element  ${account button}
+    Wait Until Page Contains Element  ${click button to sign in}
+    Click Element  ${click button to sign in}
 User Click Submit
-    [Arguments]  ${SUBMIT_TO_SIGN_IN}
-    Wait Until Page Contains Element  ${SUBMIT_TO_SIGN_IN}
-    Click Element  ${SUBMIT_TO_SIGN_IN}
+    [Arguments]  ${submit to sign in}
+    Wait Until Page Contains Element  ${submit to sign in}
+    Click Element  ${submit to sign in}
 Dismiss Alert
     Click Element  css=#widgets-view-email-modal-mount > div > div > div:nth-child(2) > div > div > div > div > button
