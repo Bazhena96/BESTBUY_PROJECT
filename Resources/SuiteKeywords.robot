@@ -45,11 +45,9 @@ User Sign Into Account
 User Add Product To Cart
     [Arguments]  ${country}
     &{add to cart button}  Create Dictionary   ca=css=.button_1XJDJ  us=css=#fulfillment-add-to-cart-button-ae06fe1c-7f9a-4336-be08-258612411dec > div > div > button  mx=css=.btn-lg
-    Wait Until Page Contains Element  ${add to cart button}[${country}]
-    Click Element  ${add to cart button}[${country}]
+    Wait And Click  ${add to cart button}[${country}]
 Verify That Product At The Cart
     Wait Until PAge Contains  added to cart
-    Page Should Contain  added to cart
 
     
     
