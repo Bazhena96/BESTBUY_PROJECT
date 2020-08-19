@@ -6,7 +6,6 @@ Resource  BaseKeywords.robot
 Choose The Country
     [Arguments]  ${country}
     &{country button}  Create Dictionary  ca=css=.content > div:nth-child(1) > div:nth-child(4) > a:nth-child(1) > img:nth-child(1)  us=css=.content > div:nth-child(1) > div:nth-child(4) > a:nth-child(2) > img:nth-child(1)  mx=css=.content > div:nth-child(1) > div:nth-child(4) > a:nth-child(3) > img:nth-child(1)
-    Open and Load
     Click Element  ${country button}[${country}]
 Verify That Search Completed
     Wait Until Page Contains  Results for
@@ -16,7 +15,7 @@ User Sort All Results
     Sort Product  ${sort product}[${country}]
 User Select One Of The Results
     [Arguments]  ${country}
-    &{product link}  Create Dictionary     ca=css=div.col-xs-12_1GBy8:nth-child(1) > div:nth-child(1) > a:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1)  us=css=#shop-sku-list-item-d7b8f316-da9f-4c3e-8eed-a52f50a4facc > div > div > div.right-column > div.information > div:nth-child(2) > div.sku-title > h4   mx=css=#product-line-item-1000204433 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > a:nth-child(1) > h4:nth-child(1)
+    &{product link}  Create Dictionary     ca=css=div.col-xs-12_1GBy8:nth-child(1) > div:nth-child(1) > a:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1)  us=css=#shop-sku-list-item-60d05b43-d0e6-40b2-810d-cae509018b75 > div > div > div.right-column > div.information > div:nth-child(3) > div.sku-title > h4 > a  mx=css=#product-line-item-1000204433 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > a:nth-child(1) > h4:nth-child(1)
     Maximize Browser Window
     Wait Until Page Contains Element  ${product link}[${country}]
     Select Item  ${product link}[${country}]
@@ -42,7 +41,7 @@ User Sign In to Account
     User Click Submit  ${submit to sign in}[${country}]
 User Add Product To Cart
     [Arguments]  ${country}
-    &{add to cart button}  Create Dictionary   ca=css=#test  us=css=#fulfillment-add-to-cart-button-d0c8ddec-cc43-4bd3-9be5-4d2c88349bf7 > div > div > button  mx=css=.btn-lg
+    &{add to cart button}  Create Dictionary   ca=css=#test  us=css=#fulfillment-add-to-cart-button-dc6d05f2-db9d-498b-83b0-d0cdea78fdc7 > div > div > button  mx=css=.btn-lg
     Wait And Click  ${add to cart button}[${country}]
 Verify That Product At The Cart
         [Arguments]  ${country}
