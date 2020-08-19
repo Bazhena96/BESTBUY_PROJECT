@@ -16,8 +16,8 @@ Test checkout flow
          Choose The Country  ${country}
          Run Keyword IF  '${country}' == 'us'  Dismiss Alert US
          Run Keyword IF  '${country}' == 'us'  User Sign In to Account  ${country}  ELSE  Run Keyword and Ignore Error  User Sign In to Account  ${country}
-         User Search The Product  ${country}
          Run Keyword IF  '${country}' == 'mx'  Dismiss Alert MX
+         User Search The Product  ${country}
          Verify That Search Completed
          User Sort All Results   ${country}
          User Select One Of The Results  ${country}
