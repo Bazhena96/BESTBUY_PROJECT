@@ -1,5 +1,5 @@
 *** Settings ***
-Library  SeleniumLibrary
+Library   SeleniumLibrary
 Resource  GlobalVariables.robot
 Resource  SuiteKeywords.robot
 *** Keywords ***
