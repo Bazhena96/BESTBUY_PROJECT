@@ -4,12 +4,12 @@ Resource  ../Resources/BaseKeywords.robot
 Resource  ../Resources/SuiteKeywords.robot
 
 *** Test Cases ***
-#User open and load Page
-#    Open and Load
-#User choose the language settings
-#    Open and Load
-#    Choose The Language
-#    Close Browser
+User open and load Page
+    Open and Load
+User choose the language settings
+    Open and Load
+    Choose The Language
+    Close Browser
 Test checkout flow
     @{countryes} =  Create List  us  ca  mx
     FOR  ${country}  IN  @{countryes}
