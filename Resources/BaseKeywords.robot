@@ -23,11 +23,11 @@ Select Item
 User Input Email To Sign In
     [Arguments]  ${user email field}
     Wait Until page Contains Element  ${user email field}
-    Input Text  ${user email field}  ${user email}
+    Input Text  ${user email field}  ${User email}
 User Input Password
     [Arguments]  ${password field}
     Wait Until Page Contains Element  ${password field}
-    Input Password  ${password field}  ${user password}
+    Input Password  ${password field}  ${User password}
 User Click The Button To Account
     [Arguments]  ${click button to sign in}  ${account button}
     Wait And Click  ${account button}
@@ -35,5 +35,8 @@ User Click The Button To Account
 User Click Submit
     [Arguments]  ${submit to sign in}
     Wait And Click  ${submit to sign in}
-Dismiss Alert
+Dismiss Alert US
     Click Element  css=#widgets-view-email-modal-mount > div > div > div:nth-child(2) > div > div > div > div > button
+Dismiss Alert MX
+    Click Element  css=#button-acceptar-alertcustomer-message
+
