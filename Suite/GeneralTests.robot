@@ -5,12 +5,13 @@ Resource  ../Resources/SuiteKeywords.robot
 
 *** Test Cases ***
 User open and load Page
-    Open and Load
+    Load And Maximize Browser Window
 User choose the language settings
-    Open and Load
+    Load And Maximize Browser Window
     Choose The Language
     Close Browser
 Test checkout flow
+    Load And Maximize Browser Window
     @{countryes} =  Create List  us  ca  mx
     FOR  ${country}  IN  @{countryes}
          Choose The Country  ${country}
@@ -24,3 +25,4 @@ Test checkout flow
          User Add Product To Cart  ${country}
          Verify That Product At The Cart  ${country}
      END
+     Close Browser
