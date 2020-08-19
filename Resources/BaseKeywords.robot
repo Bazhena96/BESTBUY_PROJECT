@@ -10,6 +10,9 @@ Wait And Click
     [Arguments]  ${locator}
     Wait Until Page Contains Element  ${locator}
     Click Element  ${locator}
+Load And Maximize Browser Window
+    Open and Load
+    Maximize Browser Window
 Choose The Language
     [Documentation]  Language: english
     Wait And Click  css=.is-active
