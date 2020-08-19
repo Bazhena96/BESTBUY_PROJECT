@@ -37,6 +37,13 @@ User Click Submit
     Wait And Click  ${submit to sign in}
 Dismiss Alert US
     Click Element  css=#widgets-view-email-modal-mount > div > div > div:nth-child(2) > div > div > div > div > button
+Dismiss Alert
+    Sleep  60
+    Wait And Click  css=#button-acceptar-alertcustomer-message
+    Wait And Click  css=#button-acceptar-alertcustomer-message
+
 Dismiss Alert MX
-    Click Element  css=#button-acceptar-alertcustomer-message
+    ${button count}  Get Element Count  css=#button-acceptar-alertcustomer-message
+    Run Keyword IF  ${button count}>0  Dismiss Alert
+
 
