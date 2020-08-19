@@ -4,11 +4,7 @@ Resource  GlobalVariables.robot
 Resource  SuiteKeywords.robot
 *** Keywords ***
 Open and Load
-    # ${chrome_options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
-    # ${disabled}  Create List  Chrome PDF Viewer  PrintFileServer
-    # ${prefs}  Create Dictionary  download.prompt_for_download=${FALSE}  plugins.always_open_pdf_externally=${TRUE}  plugins.plugins_disabled=${disabled}
-    # Call Method  ${chrome_options}  add_experimental_option  prefs  ${prefs}
-    Open Browser  https://www.bestbuy.com  chrome  executable_path=/usr/local/Caskroom/chromedriver/83.0.4103.39/chromedriver   
+    Open Browser  https://www.bestbuy.com  chrome  executable_path=/usr/local/Caskroom/chromedriver/83.0.4103.39/chromedriver
     Set Browser Implicit Wait  20
 Wait And Click
     [Arguments]  ${locator}
