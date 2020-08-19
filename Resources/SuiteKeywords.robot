@@ -5,9 +5,7 @@ Resource  BaseKeywords.robot
 *** Keywords ***
 Choose The Country
     [Arguments]  ${country}
-    
     &{country button}  Create Dictionary  ca=css=.content > div:nth-child(1) > div:nth-child(4) > a:nth-child(1) > img:nth-child(1)  us=css=.content > div:nth-child(1) > div:nth-child(4) > a:nth-child(2) > img:nth-child(1)  mx=css=.content > div:nth-child(1) > div:nth-child(4) > a:nth-child(3) > img:nth-child(1)
-
     Open and Load
     Click Element  ${country button}[${country}]
 Verify That Search Completed
@@ -18,7 +16,7 @@ User Sort All Results
     Sort Product  ${sort product}[${country}]
 User Select One Of The Results
     [Arguments]  ${country}
-    &{product link}  Create Dictionary     ca=css=div.col-xs-12_1GBy8:nth-child(1) > div:nth-child(1) > a:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1)  us=css=button.btn-primary:nth-child(1)      mx=css=#product-line-item-1000204433 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > a:nth-child(1) > h4:nth-child(1)
+    &{product link}  Create Dictionary     ca=css=div.col-xs-12_1GBy8:nth-child(1) > div:nth-child(1) > a:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1)  us=css=#shop-sku-list-item-48c02f13-d653-4bd8-a4a8-701b456344bd > div > div > div.right-column > div.information > div:nth-child(3) > div.sku-title > h4 > a    mx=css=#product-line-item-1000204433 > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > a:nth-child(1) > h4:nth-child(1)
     Maximize Browser Window
     Wait Until Page Contains Element  ${product link}[${country}]
     Select Item  ${product link}[${country}]
@@ -31,7 +29,7 @@ User Search The Product
     Sleep  5
     Wait Until Page Contains Element  ${search icon}[${country}]
     Click Element   ${search icon}[${country}]
-User Sign Into Account
+User Sign In to Account
     [Arguments]  ${country}
     &{account button}  Create Dictionary  ca=css=.accountLabel_3bhLI  mx=css=#profileMenuWrap1  us=css=.account-icon
     &{click button to sign in}  Create Dictionary  ca=css=.page-title  us=css=.lam-signIn__button  mx=css=.action-btn
@@ -44,7 +42,7 @@ User Sign Into Account
     User Click Submit  ${submit to sign in}[${country}]
 User Add Product To Cart
     [Arguments]  ${country}
-    &{add to cart button}  Create Dictionary   ca=.primary_oeAKs  us=css=#fulfillment-add-to-cart-button-9f846657-c048-4950-ac4b-245c234e72e3 > div > div > button  mx=css=.btn-lg
+    &{add to cart button}  Create Dictionary   ca=css=#test  us=css=#fulfillment-add-to-cart-button-5c6aee6d-2dd3-462e-9661-d9c30384d075 > div > div > button  mx=css=.btn-lg
     Wait And Click  ${add to cart button}[${country}]
 Verify That Product At The Cart
         [Arguments]  ${country}
