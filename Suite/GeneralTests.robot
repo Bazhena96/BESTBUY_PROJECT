@@ -2,7 +2,6 @@
 Library  SeleniumLibrary
 Resource  ../Resources/BaseKeywords.robot
 Resource  ../Resources/SuiteKeywords.robot
-
 *** Test Cases ***
 User open and load Page
     Load And Maximize Browser Window
@@ -20,9 +19,9 @@ Test checkout flow
          Run Keyword IF  '${country}' == 'mx'  Dismiss Alert MX
          User Search The Product  ${country}
          Verify That Search Completed
-         User Sort All Results   ${country}
+         User Sort All Results  ${country}
          User Select One Of The Results  ${country}
          User Add Product To Cart  ${country}
          Verify That Product At The Cart  ${country}
-     END
-     Close Browser
+    END
+    Close Browser
