@@ -21,7 +21,7 @@ Sort Product
     Wait Until Page Contains Element  ${sort product}
     Click Element  ${sort product}
 Select Item
-    [Arguments]    ${product link}
+    [Arguments]  ${product link}
     Click Element  ${product link}
 User Input Email To Sign In
     [Arguments]  ${user email field}
@@ -41,10 +41,9 @@ User Click Submit
 Dismiss Alert US
     Click Element  css=#widgets-view-email-modal-mount > div > div > div:nth-child(2) > div > div > div > div > button
 Dismiss Alert
-    Sleep  60
+    Sleep  5
     Wait And Click  css=#button-acceptar-alertcustomer-message
     Wait And Click  css=#button-acceptar-alertcustomer-message
-
 Dismiss Alert MX
     ${button count}  Get Element Count  css=#button-acceptar-alertcustomer-message
     Run Keyword IF  ${button count}>0  Dismiss Alert
