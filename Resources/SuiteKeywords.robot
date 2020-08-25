@@ -24,7 +24,7 @@ User Search The Product
     &{search field}  Create Dictionary  ca=css=.textField_e79SD  us=gh-search-input  mx=#gh-search-input
     &{search icon}  Create Dictionary  ca=css=.searchButton_T4-BG  us=css=.header-search-button  mx=css=.header-search-button
     Wait Until Page Contains Element  ${search field}[${country}]
-    Input Text  ${search field}[${country}]  ${Search query}
+    Input Text  ${search field}[${country}]  ${SEARCH QUERRY}
     Sleep  5
     Wait Until Page Contains Element  ${search icon}[${country}]
     Click Element  ${search icon}[${country}]
