@@ -44,8 +44,8 @@ User Add Product To Cart
     &{add to cart button}  Create Dictionary  ca=css=#test  us=css=#fulfillment-add-to-cart-button-dc6d05f2-db9d-498b-83b0-d0cdea78fdc7 > div > div > button  mx=css=.btn-lg
     Wait And Click  ${add to cart button}[${country}]
 Verify That Product At The Cart
-     [Arguments]  ${country}
-     &{added to cart}  Create Dictionary  ca=This item has been added to your cart.  us=Order Summary  mx=Tù Producto Se Agregó Al Carrito.
+    [Arguments]  ${country}
+    &{added to cart}  Create Dictionary  ca=This item has been added to your cart.  us=Order Summary  mx=Tù Producto Se Agregó Al Carrito.
     Wait Until Page Contains  ${added to cart}[${country}]
 
 
