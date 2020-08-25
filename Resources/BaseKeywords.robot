@@ -26,11 +26,11 @@ Select Item
 User Input Email To Sign In
     [Arguments]  ${user email field}
     Wait Until page Contains Element  ${user email field}
-    Input Text  ${user email field}  ${User email}
+    Input Text  ${user email field}  ${USER EMAIL}
 User Input Password
     [Arguments]  ${password field}
     Wait Until Page Contains Element  ${password field}
-    Input Password  ${password field}  ${User password}
+    Input Password  ${password field}  ${USER PASSWORD}
 User Click The Button To Account
     [Arguments]  ${click button to sign in}  ${account button}
     Wait And Click  ${account button}
